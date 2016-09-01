@@ -1,5 +1,6 @@
 package jason.handlebars.entity;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
 
 import javax.persistence.Entity;
@@ -11,11 +12,12 @@ import javax.persistence.Id;
  */
 @Entity
 @Data
+@AllArgsConstructor
 public class Member {
 
     @Id
     @GeneratedValue
     private Long id;
 
-    private Long name;
+    private String name;
 }

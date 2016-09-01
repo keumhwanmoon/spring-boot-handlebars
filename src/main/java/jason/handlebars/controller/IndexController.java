@@ -42,17 +42,4 @@ public class IndexController {
     public List<Member> memberList() {
         return memberRepository.findAll();
     }
-
-    @RequestMapping(value = "/member/{memberId}")
-    public Member memberInfo(@PathVariable("memberId") String memberId) {
-
-        String query =
-                "SELECT * FROM Member M Where M.memberId = :memberId";
-
-//        Handlebars handlebars = new Handlebars()
-//
-//        template.query(query, new MapSqlParameterSource());
-
-        return new Member();
-    }
 }
