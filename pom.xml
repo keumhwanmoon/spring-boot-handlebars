@@ -6,7 +6,7 @@
 	<groupId>jason.handlebars</groupId>
 	<artifactId>springboot-handlebars</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<packaging>jar</packaging>
+	<packaging>war</packaging>
 
 	<name>SpringBoot Handlebars</name>
 	<description>SpringBoot Handlebars</description>
@@ -64,7 +64,7 @@
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
 		</plugins>
+		<finalName>spring-boot-handlebars</finalName>
 	</build>
-
 
 </project>
