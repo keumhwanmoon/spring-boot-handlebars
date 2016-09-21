@@ -222,6 +222,7 @@
                             Your awesome text goes here.
                         </p>
                         <div class="table-responsive">
+                            {{> index/template/latest_project }}
                         </div>
                     </div>
                 </div>
@@ -267,15 +268,6 @@
         <!-- end container -->
     </div>
     <!-- end content -->
-
-    <script>
-        {{precompile "index/template/latest_project"}}
-    </script>
-    <script>
-        var template = Handlebars.templates['index/template/latest_project'];
-
-        $(".table-responsive").html(template());
-    </script>
 
     <!-- FOOTER -->
     {{> layout/footer }}
