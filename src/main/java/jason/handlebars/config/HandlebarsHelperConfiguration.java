@@ -23,7 +23,7 @@ public class HandlebarsHelperConfiguration {
     @PostConstruct
     public void registerHelper() {
         try {
-            String currentPath = new java.io.File( "." ).getCanonicalPath();
+            String currentPath = new File( "." ).getCanonicalPath();
             handlebarsViewResolver.registerHelpers(new File(currentPath + "/target/spring-boot-handlebars/WEB-INF/classes/static/handlebars/handlebars-intl.min.js"));
         } catch (Exception e) {
             System.out.println("Handlebars registerHelper Error :: " + e.toString());
