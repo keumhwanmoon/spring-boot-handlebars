@@ -1,11 +1,11 @@
 package jason.handlebars.config;
 
+import com.github.jknack.handlebars.helper.StringHelpers;
 import com.github.jknack.handlebars.springmvc.HandlebarsViewResolver;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
 
 import javax.annotation.PostConstruct;
-import java.io.File;
 
 /**
  * @author jason, Moon
@@ -23,10 +23,9 @@ public class HandlebarsHelperConfiguration {
     @PostConstruct
     public void registerHelper() {
         try {
-            String currentPath = new File( "." ).getCanonicalPath();
-            handlebarsViewResolver.registerHelpers(new File(currentPath + "/target/spring-boot-handlebars/WEB-INF/classes/static/handlebars/handlebars-intl.min.js"));
+            handlebarsViewResolver.registerHelpers(StringHelpers.class);
         } catch (Exception e) {
-            System.out.println("Handlebars registerHelper Error :: " + e.toString());
+            System.out.println("Handlebars registerHelper Error :: \n" + e.toString());
         }
     }
 }
